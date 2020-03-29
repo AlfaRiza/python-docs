@@ -1,0 +1,329 @@
+Belajar Python
+readable, consistent & explicit
+
+# Eps 1
+Definisi
+->python adalah bahasa interpretatif dapat digunakan berbagai platform berfokus tingkat keterbacaan berkaitan data science, machine learning, iot
+
+Keunggulan
+-> bersifat interpretatif untuk prototyping, scripting, web skala besar.
+
+Dibuat oleh Guido van Rossum a.k.a GvR pada tahun 1991. Memiliki exception handling atau penanganan kesalahan dan readability atau mudah dibaca
+
+memudahkan untuk prototyping sangat mudah dan flexible.
+
+menggunakan indentasi untuk mengelompokkan blok kode, tanpa sintaksis begin-end, tanpa semicolon(digunakan untuk 2 statement dalam 1 baris)
+
+code
+`print("Hello World"); print("Welcome to Python")`
+
+dynamic typing opsional -> variabel tidak diketahui tipe datanya sampai dia di panggil dan memungkinkan tipedata berubah.
+
+python versi 3 didesain tidak backward-comatible
+
+patokan dalam pengembangan python -> zen of python
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+
+
+# Eps 2
+Termasuk 3 besar bahasa terbanyak digunakan, dapat digunakan gaya strucktured, prosedural, oop, fungsional.
+Dapat berjalan di benyak OS.
+
+Manfaat Python :
+- Web development(django, flusk).
+- Software development.
+- Math and Data Science
+- Machine Learning
+- System Scripting
+- IOT development
+
+Siapapun dapat mengembangkan library dan modul milik python.
+Python menyediakan library yang meliputi regular expressions, documentation generation, unit testing, threading, databases, web browsers, koneksi ke berbagai protokol, cryptography, GUI (graphical user interfaces), dan lain-lain.
+
+Python Package Index (https://pypi.org/) menyediakan lebih dari 209.000 modul (*Desember 2019) dan skrip yang dapat diinstal dan digunakan secara mudah.
+
+Saat ini, Python juga menjadi salah satu bahasa pilihan untuk masuk ke dunia Data Science. Tiga hal utama pada Data Science -  machine learning, data analysis, dan data visualization  banyak disediakan berbasis Python. Sejumlah pustaka paling banyak digunakan dalam machine learning berbasis Python, misalnya: Scikit-Learn, Tensorflow, dan PyTorch.
+
+# Eps 3, instalasi python
+
+python --version
+
+
+# Eps 4 Mode operasi pada python
+- interactive
+- script/scripting
+- notebook
+
+
+1. Interactive
+python berbasi interpreter yang memungkinkan kita menjalankan perintah secara interaktif. cara menjalankan mode ini ketik perintah "python", mode ini cocok untuk coding yang singkat, menyelesaikan masalah yang simpel/tidak rumit.
+Keuntungan :
+- coding dibaca secara berurutan
+- variabel akan tersimpan
+- import library
+- cocok untuk rapis-prototyping
+
+2. Script
+mode ini menggunakan text extensinya .py
+mode ini dapat menggunakan jupiter notebook, repl.it, google colab dll.
+
+# Eps 5 Style Guide
+panduan menulis code python mengacu pada PEP-008
+
+- Indentasi
+penulisan indentasi untuk menulis kode bertingkat dengan 4 spasi, di bahasa lain mungkin menggunakan begin-end
+contoh :
+`Statement tingkat 1:
+    Statement tingkat 2()
+    Statement tingkat 2 yang kedua()`
+
+- Baris lanjutan
+biasanya di lakukan ketika baris tidak cukup, umumnya dapat menggunakan tanda kurung, kurung kurawal dll
+contoh :
+`opsi 1
+# Rata kiri dengan kurung atau pemisah dengan argumen utama
+foo = long_function_name(var_one, var_two,
+                         var_three, var_four)
+ 
+# Opsi 2
+# Tambahkan indentasi ekstra - (level indentasi baru) untuk memisahkan parameter/argument dari bagian lainnya
+def long_function_name(
+        var_one, var_two, var_three,
+        var_four):
+    print(var_one)
+ 
+# Opsi 3
+# Hanging indents dengan penambahan level indentasi saja
+foo = long_function_name(
+    var_one, var_two,
+    var_three, var_four)`
+
+- Pengendalian(if)
+python tidak memberikan panduan spesifik
+`if (sebuah kondisi dan
+    kondisi yang lain):
+    lakukanSesuatu()`
+
+- kurung/siku penutup
+penempatan kurung/siku penutup dapat diletakkan seperti baris lanjutan atau sejajar dengan statement awal.
+`my_list = [
+    1, 2, 3,
+    4, 5, 6,
+    ]
+ 
+result = some_function_that_takes_arguments(
+    'a', 'b', 'c',
+    'd', 'e', 'f',
+    )`
+`my_list = [
+    1, 2, 3,
+    4, 5, 6,
+]
+ 
+result = some_function_that_takes_arguments(
+    'a', 'b', 'c',
+    'd', 'e', 'f',
+)`
+
+- Tab atau spasi
+pencampuran tab dan spasi tidak disarankan, biasanya yang digunakan adalah spasi.
+
+- panjang baris maksimum
+79 karakter perbaris, usahakan batasi tidak lebih dari 72 karakter.
+aturan ini bertujuan untuk code review tools untuk membandingkan 2 versi yang berbeda.
+
+# Eps 6 Lanjutan guide scripting
+- Mengganti baris setelah operasi binary
+`income = (gross_wages
+          + taxable_interest
+          + (dividends - qualified_dividends)
+          - ira_deduction
+          - student_loan_interest)`
+
+- Baris kosong
+digunakan 2 baris kosong pada top level function dan class definitions
+
+- File encoding
+pada python 3 = UTF-8, pada python 2 = ASCII
+
+- Import
+lakukan import satu persatu perbaris
+`import os
+ import sys`
+kecuali import sub library dari library yang sama
+`from subprocess import Popen, PIPE`
+
+kelompokkan import dalam urutan berikut:
+
+Standard Library
+Library Pihak Ketiga
+Local/Library spesifik
+Setiap grup baiknya dipisahkan oleh sebuah baris kosong.
+`from myclass import MyClass
+from foo.bar.yourclass import YourClass`
+
+- Tanda Petik
+petik satu(') dan petik dua(") dianggap sama dengan python, gunakan salah satu secara konsisten.
+
+Docstring (dokumentasi kode/fungsi/method)
+disarankan menggunakan petik 2 sebanyak 3 kali.
+
+- White Space pada expression dan statement
+wajib dihindari
+`spam(ham[1], {eggs: 2})
+foo = (0,)
+ham[1:9], ham[1:9:3], ham[:9:3], ham[1::3], ham[1:9:]
+ham[lower:upper], ham[lower:upper:], ham[lower::step]
+ham[lower+offset : upper+offset]
+ham[: upper_fn(x) : step_fn(x)], ham[:: step_fn(x)]
+ham[lower + offset : upper + offset]`
+
+biasakan menambahkan white space kanan kiri pada operasi penugasan, comparison, boolean.
+`i = i + 1
+submitted += 1
+x = x*2 - 1
+hypot2 = x*x + y*y
+c = (a+b) * (a-b)`
+
+- Komentar, Blok komentar
+diawali dengan # pada setiap baris
+
+komentar inline dilakukan setelah code dengan menambahkan 2 spasi kemudian #
+
+# Eps 7 Tipe Data
+- Numbers
+berisi integer, float, complex
+`a = 5
+print(a, "is of type", type(a))
+a = 2.0
+print(a, "is of type", type(a))
+a = 1+2j
+print(a, "is complex number?", isinstance(1+2j,complex))`
+
+pada tipe data numbers tidak ada pembatasan memori, tidak ada bigint, atau tinyint semua sama.
+
+- String 
+ditandai dengan petik satu atau petik dua, penulisan lebih dari satu baris menggunakan 3 kali petik satu atau tiga kali petik dua.
+kita dapat meng outputkan index salah satu huruf dimulai dari 0
+
+- Bool/Boolean
+mengembalikan nilai true atau false.
+
+- List
+kumpulan data yang terurut, tipe data yang didalamnya dapat berbeda-beda.
+[] = tanda ekstrasi.
+`x = [5,10,15,20,25,30,35,40]
+print(x[5])
+print(x[-1])
+print(x[3:5])
+print(x[:5])
+print(x[-3:])
+print(x[1:7:2])`
+
+Output : 
+30
+40
+[20, 25]
+[5, 10, 15, 20, 25]
+[30, 35, 40]
+[10, 20, 30]
+
+Pada element list dapat diubah atau ditambahkan.
+`x = [1,2,3]
+x[2]=4
+x`
+Output :
+[1, 2, 4]
+
+menambahkan :
+`x.append(5)
+x`
+Output :
+[1, 2, 4, 5]
+
+menghapus element dapat menggunakan perintah del
+`spam = ['cat', 'bat', 'rat', 'elephant']
+del spam[2]
+spam`
+Output :
+['cat', 'bat', 'elephant']
+
+# Eps 8 Lanjutan Tipe Data
+- Tuple 
+sejenis list, namun tipe data nya tidak dapat diubah, atau sekali initialisasi.
+
+- Set
+Set adalah kumpulan item bersifat unik dan tanpa urutan (unordered collection). Didefinisikan dengan kurawal dan elemennya dipisahkan dengan koma. Pada Set kita dapat melakukan union dan intersection, sekaligus otomatis melakukan penghapusan data duplikat.
+`a = {1,2,2,3,3,3}
+a`
+Output :
+{1, 2, 3}
+
+- Dictionary
+Dictionary pada Python adalah kumpulan pasangan kunci-nilai (pair of key-value) yang bersifat tidak berurutan. Dictionary dapat digunakan untuk menyimpan data kecil hingga besar. Untuk mengakses datanya, kita harus mengetahui kuncinya (key). Pada Python, dictionary didefinisikan dengan kurawal dan tambahan definisi berikut:
+
+Setiap elemen pair key-value dipisahkan dengan koma (,)
+Key dan Value dipisahkan dengan titik dua (:)
+Key dan Value dapat berupa tipe variabel/obyek apapun
+`d = {1:'value','key':2}
+print(type(d))
+print("d[1] = ", d[1]);
+print("d['key'] = ", d['key']);
+ 
+# Generates error
+print("d[2] = ", d[2]);`
+
+Output :
+<class 'dict'>
+d[1] = value
+d['key'] = 2
+
+---------------------------------------------------------------------------
+KeyError Traceback (most recent call last)
+<ipython-input-7-4b566e677ca2> in <module>()
+1 d = {1:'value','key':2}
+----> 2 print("d[2] = ", d[2]);
+
+KeyError: 2
+
+- Konversi tipe data
+kita dapat mengubah tipe data, namun dengan memperhatikan validasinya(aturan dalam tipe data tersebut).
+
+list('yang mau di konversi')
+tupple('yang mau dikonversi')
+
+
+# Eps 9 Input Output
+variabel = tempat untuk menyimpan tipedata.
+%s - String
+%d - Integers
+%f - Bilangan Pecahan
+%.<digit>f - Bilangan pecahan dengan sejumlah digit angka dibelakang koma.
+%x/%X - Bilangan bulat dalam representasi Hexa (huruf kecil/huruf besar)
+
+
+# Eps 10 Dynamic type
+dynamic type = variabel flexibel.
+
+
+
+
